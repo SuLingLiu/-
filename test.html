@@ -7,12 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        for(let i=0; i<4; i++) {
-    setTimeout(function() {
-        console.log(i);
-    },1000)
+<style>
+* {
+    margin: 0;
+    padding: 0;
 }
-    </script>
+.column {
+    width: 31.33%;
+    background-color: green;
+    float: left;
+    margin: 0 1%;
+}
+/*  Establishing a new block formatting 
+    context in the last column */
+.column:last-child {
+    float: none;
+overflow: hidden; 
+}
+</style>
+<div class="container">
+        <div class="column">column 1</div>
+        <div class="column">column 2</div>
+        <div class="column">column 3</div>
+    </div>
 </body>
-</html>
